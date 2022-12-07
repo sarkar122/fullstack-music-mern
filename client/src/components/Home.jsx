@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getAllSongs } from "../api";
 import { actionType } from "../Context/reducer";
 import { useStateValue } from "../Context/StateProvider";
-import DashboardSongs from "./DashboardSongs";
+import Migrate from "./Migrate";
 import Filter from "./Filter";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
@@ -170,9 +170,11 @@ import { motion } from "framer-motion";
 const Home = () => {
     return (
         <div className="w-full h-auto flex flex-col items-center justify-center bg-primary">
-
             <Header />
-            <DashboardSongs />
+
+            <Filter />
+
+            <Migrate />
         </div>)
 
 }
